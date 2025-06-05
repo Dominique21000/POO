@@ -1,4 +1,4 @@
-package fr.eni.itlo.ds;
+package fr.eni.itlo.ds.parc;
 
 public class Velo extends Vehicule {
 

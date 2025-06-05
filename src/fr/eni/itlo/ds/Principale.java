@@ -1,5 +1,7 @@
 package fr.eni.itlo.ds;
 
+import fr.eni.itlo.ds.parc.Vehicule;
+
 public class Principale {
 
 	public static void main(String[] args) {

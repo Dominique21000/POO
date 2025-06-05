@@ -1,4 +1,4 @@
-package fr.eni.itlo.ds;
+package fr.eni.itlo.ds.parc;
 
 public class Voiture extends Vehicule {
 
@@ -25,5 +25,12 @@ public class Voiture extends Vehicule {
 
 	public void setQuantiteCarburantMaximum(int quantiteCarburantMaximum) {
 		this.quantiteCarburantMaximum = quantiteCarburantMaximum;
-	}	
+	}
+	
+	public void accelerer() {
+		if (quantiteCarburant > 0) {
+			super.accelerer();
+			quantiteCarburant--;
+		}		
+	}
 }
