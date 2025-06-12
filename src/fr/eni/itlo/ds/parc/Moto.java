@@ -1,6 +1,6 @@
 package fr.eni.itlo.ds.parc;
 
-public class Moto extends Vehicule{
+public class Moto extends Vehicule implements Vidangeable {
 
 	private int cylindree;
 
@@ -11,5 +11,10 @@ public class Moto extends Vehicule{
 
 	public int getCylindree() {
 		return cylindree;
+	}
+
+	@Override
+	public void faireLaVidange() {
+		System.out.println("Vidange de la moto en cours");
 	}
 }

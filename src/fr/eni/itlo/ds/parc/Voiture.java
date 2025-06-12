@@ -1,6 +1,6 @@
 package fr.eni.itlo.ds.parc;
 
-public class Voiture extends Vehicule {
+public class Voiture extends Vehicule implements Vidangeable{
 
 	private int quantiteCarburant;
 	private int quantiteCarburantMaximum;
@@ -32,5 +32,10 @@ public class Voiture extends Vehicule {
 			super.accelerer();
 			quantiteCarburant--;
 		}		
+	}
+
+	@Override
+	public void faireLaVidange() {
+		System.out.println("Vidange de la voiture en cours...");		
 	}
 }
