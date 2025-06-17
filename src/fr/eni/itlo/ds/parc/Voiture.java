@@ -1,5 +1,7 @@
 package fr.eni.itlo.ds.parc;
 
+import fr.eni.itlo.ds.exceptions.VehiculeException;
+
 public class Voiture extends Vehicule implements Vidangeable{
 
 	private int quantiteCarburant;
@@ -27,11 +29,14 @@ public class Voiture extends Vehicule implements Vidangeable{
 		this.quantiteCarburantMaximum = quantiteCarburantMaximum;
 	}
 	
-	public void accelerer() {
+	public void accelerer() throws VehiculeException {
 		if (quantiteCarburant > 0) {
 			super.accelerer();
 			quantiteCarburant--;
-		}		
+		}
+		else {
+			throw new VehiculeException("Plus de carburant."); 
+		}
 	}
 
 	@Override

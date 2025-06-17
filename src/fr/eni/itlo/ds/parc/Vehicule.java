@@ -1,5 +1,7 @@
 package fr.eni.itlo.ds.parc;
 
+import fr.eni.itlo.ds.exceptions.VehiculeException;
+
 public class Vehicule {
 
 	private int vitesse;
@@ -13,9 +15,12 @@ public class Vehicule {
 		this.vitesseMaximum = vitesseMaximum;
 	}
 
-	public void accelerer() {
+	public void accelerer() throws VehiculeException{
 		if (vitesse < vitesseMaximum) {
 			vitesse++;
+		}
+		else {
+			throw new VehiculeException("Vitesse maximum atteinte !");
 		}
 	}
 	
