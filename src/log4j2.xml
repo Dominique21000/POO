@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration strict="true" monitorInterval="60">
+
+	<!-- Définition de propriétés pour réutilisation -->
+    
+	<Properties>
+	    <Property name="filename">application.log</Property>
+	</Properties>
+    
+	<!-- Définition des 'Appenders', destination et format des messages -->
+	<Appenders>
+	    <Appender type="Console" name="console">
+	        <PatternLayout pattern="%d{DATE} [%t] %5level (%logger) - %msg %n" />
+	   	</Appender>
+	        
+	    <Appender type="File" name="fichier" filename="${filename}">
+	        <PatternLayout pattern="%d{DATE} [%t] %5level (%logger) - %msg %n" /></Appender>
+	    </Appenders>
+    
+	<!-- Définition des 'Loggers', identification des classes Java et deleur niveau de journalisation -->
+	<Loggers>
+	    <Root level="Info">
+	        <AppenderRef ref="console" />
+	        <AppenderRef ref="fichier" />
+	    </Root>
+	</Loggers>
+</Configuration>
